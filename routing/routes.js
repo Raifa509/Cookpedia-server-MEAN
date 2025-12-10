@@ -1,5 +1,6 @@
 const express=require('express')
 const recipeController=require('../controllers/recipeController')
+const userController=require('../controllers/userController')
 const routes=express.Router()
 
 
@@ -7,6 +8,11 @@ const routes=express.Router()
 routes.get('/recipes/all',recipeController.getRecipeController)
 
 
+//register
+routes.post('/register',userController.registerController)
+
+//login
+routes.post('/login',userController.loginController)
 
 
 
